@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import Alamofire
 
 class APIClient: NSObject
 {
@@ -232,5 +234,21 @@ class APIClient: NSObject
 //        })
 //        
     }
-
+    func apiCallAlamorPOST(Url:String,parameters: [String : Any], completionHandler: @escaping (_ Dic: NSDictionary?,_ status:Error?) -> Void)
+    {
+        //        let headers = ["Authorization" : "Bearer "+accessToken!+"",
+        //                       "Content-Type": "application/json"]
+        Alamofire.request(Url,method:.post, parameters: parameters, encoding: JSONEncoding.default, headers: [:]).responseJSON
+            { (response:DataResponse) in
+                switch(response.result)
+                {
+                case .success:
+                    completionHandler(response.result.value!  as? NSDictionary, response.result.error!)
+                case .failure:
+                    completionHandler(response.result.value!  as? NSDictionary, response.result.error!)
+                    break
+                }
+                
+        }
+    }
 }

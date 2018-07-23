@@ -7,5 +7,5 @@ target 'AlamofireAPIDemoCode' do
 
   # Pods for AlamofireAPIDemoCode
 pod 'SVProgressHUD'
-
+ pod 'Alamofire'
 end

@@ -72,7 +72,6 @@
 				52A6CC9621031CA600F9C047 /* View Controller */,
 				52A6CC9521031CA000F9C047 /* API */,
 				52A6CC7F21031A1200F9C047 /* AppDelegate.swift */,
-				52A6CC8121031A1200F9C047 /* ViewController.swift */,
 				52A6CC8321031A1200F9C047 /* Main.storyboard */,
 				52A6CC8621031A1200F9C047 /* Assets.xcassets */,
 				52A6CC8821031A1200F9C047 /* LaunchScreen.storyboard */,
@@ -92,6 +91,7 @@
 		52A6CC9621031CA600F9C047 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52A6CC8121031A1200F9C047 /* ViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -224,10 +224,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AlamofireAPIDemoCode/Pods-AlamofireAPIDemoCode-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

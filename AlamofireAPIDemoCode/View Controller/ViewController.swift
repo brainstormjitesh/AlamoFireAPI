@@ -13,6 +13,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //Utility.successAlert(message: "Hi")
+//        Utility.alertWith(message: "hi")
+//        Utility.alertWith("Hello", message: "Hi", doneTitle: "Done", cancelTitle: "Cancel", doneAction: {
+//            print("Done")
+//            }, cancelAction: {
+//            print("Cancel")
+//        })
+        let param : [String:Any] = ["name":"one"]
+        APIClient.sharedInstance.apiCallAlamorPOST(Url: "", parameters: param, completionHandler: {response, error in
+            
+            })
+        
     }
 
     override func didReceiveMemoryWarning() {
